@@ -70,3 +70,4 @@ switch (101 > 100) {
 }
 
 console.log("fitur search");
+console.log("fitur payment");
