@@ -1,1 +1,1 @@
-##Latihan JavaScript
+Latihan JavaScript
