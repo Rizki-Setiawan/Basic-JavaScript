@@ -221,4 +221,18 @@ const capital = {
 }
 capital["New Delhi"] = "India";
 
-console.log(capital["New Delhi"])
+console.log(capital)
+
+// reverse object
+const obj = {
+  a: 'one',
+  b: 'two',
+  c: 'three',
+}
+console.log(obj);
+const reverseKey = Object.keys(obj).reverse();
+let result = {};
+reverseKey.forEach(val => {
+  result[val] = obj[val];
+});
+console.log(result);

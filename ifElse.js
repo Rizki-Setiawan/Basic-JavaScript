@@ -13,10 +13,18 @@ const b = 20;
 const c = a + b == 30 ? true : false;
 console.log(c);
 
+// ternary multi condition
+let rpl = "E";
+rpl == "A" ? console.log("sangat baik")
+    : rpl == "B" ? console.log("baik")
+        : rpl == "C" ? console.log("cukup")
+            : rpl == "D" ? console.log("kurang")
+                : console.log("ngulang");
+
 // If/Else Statement
 
 const isRaining = true;
-const keterangan = isRaining ? "Hujan" : "Tidak hujan";
+const keterangan = isRaining ? "Hujan" : "Tidak hujan"; // ternary
 console.log(keterangan);
 
 if (isRaining) {

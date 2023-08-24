@@ -27,22 +27,18 @@
 
 // asynchronous callback (AJAX)
 const XMLHttpRequest = require('xhr2');
-const myUrl = 'https://booking.kai.id/api/stations2';
+const myUrl = 'https://dayoffapi.vercel.app/api';
 
-let response = "";
-function getDataStasiun(url, error) {
+// let response = "";
+function getHariLibur(url, error) {
 
     const xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = () => {
         if (xhttp.readyState === 4) {
             if (xhttp.status === 200) {
-                response = JSON.parse(xhttp.responseText);
-                response.forEach(({ code, name, city, cityname }) => {
-                    console.log(
-                        `kode : ${code}, nama stasiun : ${name}`
-                    );
-                });
+                // response = JSON.parse(xhttp.responseText);
+                success(xhttp);
             } else if (xhttp.status === 404) {
                 error();
             }
@@ -50,24 +46,29 @@ function getDataStasiun(url, error) {
     }
     xhttp.open('GET', url, true);
     xhttp.send();
-    return response
+    // return response;
+}
+
+function success(xhttp) {
+    let cuti = "";
+    const response = JSON.parse(xhttp.responseText)
+    response.forEach(({ tanggal, keterangan, is_cuti }) => {
+        is_cuti === true
+            ? cuti = "cuti"
+            : cuti = "bukan cuti"
+        console.log(tanggal, keterangan, cuti);
+    });
 }
 
 function error() {
     console.log("404 Not Found");
 }
 
-console.log("start");
-getDataStasiun(myUrl, error);
-console.log("end");
+getHariLibur(myUrl, error, success);
 
 // function getData() {
-//     const dataStasiun = getDataStasiun(myUrl, error);
-//     dataStasiun.forEach(({ code, name, city, cityname }) => {
-//         console.log(
-//             `kode : ${code}, nama stasiun : ${name}`
-//         );
-//     });
+//     const hariLibur = getHariLibur(myUrl, error);
+//     console.log(hariLibur);
 // }
 // setTimeout(getData, 1000);
 
