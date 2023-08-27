@@ -23,7 +23,6 @@ function greaterNumb(input) {
     return greater;
 }
 
-
 function merge(input, evenOdd, greaterNumb) {
     let convertMergeArr = "";
     const [even, odd] = evenOdd(input);
@@ -46,4 +45,6 @@ function merge(input, evenOdd, greaterNumb) {
 
 merge(input, evenOdd, greaterNumb);
 
-console.log("fitur save")
+console.log("fitur save");
+
+console.log();
