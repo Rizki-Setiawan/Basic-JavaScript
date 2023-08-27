@@ -45,3 +45,5 @@ function merge(input, evenOdd, greaterNumb) {
 }
 
 merge(input, evenOdd, greaterNumb);
+
+console.log("fitur save")
