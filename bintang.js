@@ -33,6 +33,7 @@ for (let i = 1; i <= n; i++) {
     }
     string += "\n";
 }
+
 console.log(string);
 
 let bintang = "";

@@ -15,11 +15,15 @@ console.log(c);
 
 // ternary multi condition
 let rpl = "E";
-rpl == "A" ? console.log("sangat baik")
-    : rpl == "B" ? console.log("baik")
-        : rpl == "C" ? console.log("cukup")
-            : rpl == "D" ? console.log("kurang")
-                : console.log("ngulang");
+rpl == "A"
+    ? console.log("sangat baik")
+    : rpl == "B"
+    ? console.log("baik")
+    : rpl == "C"
+    ? console.log("cukup")
+    : rpl == "D"
+    ? console.log("kurang")
+    : console.log("ngulang");
 
 // If/Else Statement
 
@@ -54,7 +58,7 @@ switch (nilai) {
         break;
     case "B":
         console.log("Lulus Bersyarat");
-        break
+        break;
     default:
         console.log("Tidak Lulus");
         break;

@@ -19,7 +19,7 @@ let kata = "palindrome";
 console.log(
   `  Kata awal : ${kata}\n
   Kata reverse : ${reverse(kata)}\n
-  Merupakan kata ${checkPalindrome(kata, reverse)}`
+  Merupakan kata ${checkPalindrome(kata, reverse)}`,
 );
 
 // function reverseString(str) {

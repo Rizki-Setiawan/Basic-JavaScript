@@ -24,13 +24,16 @@
 
 function isPrime(arrayInput) {
   for (let iterator = 2; iterator < arrayInput; iterator++) {
+    // eslint-disable-next-line require-jsdoc
     if (arrayInput % iterator === 0) {
       return false;
     }
   }
-  return (arrayInput !== 1 && arrayInput !== 0);
+  return arrayInput !== 1 && arrayInput !== 0;
 }
 
-let arrayInput = [0, 23, 2, 4, 17, 5, 25, 23, 30];
-let primes = arrayInput.filter(isPrime);
+const arrayInput = [0, 23, 2, 4, 17, 5, 25, 23, 30];
+const primes = arrayInput.filter(isPrime);
 console.log(primes);
+
+console.log("hallo");

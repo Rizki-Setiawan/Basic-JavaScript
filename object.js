@@ -206,33 +206,33 @@ const restaurant = {
   city: "Bandung",
   "favorite drink": "Es Teh",
   "favorite food": "Bakso",
-  isVegan: false
-}
+  isVegan: false,
+};
 
 let name = "";
 let favoriteDrink = "";
-({ name, "favorite drink": favoriteDrink } = restaurant)
+({ name, "favorite drink": favoriteDrink } = restaurant);
 console.log(name, favoriteDrink);
 
 const capital = {
-  "Jakarta": "Indonesia",
-  "London": "England",
-  "Tokyo": "Japan"
-}
+  Jakarta: "Indonesia",
+  London: "England",
+  Tokyo: "Japan",
+};
 capital["New Delhi"] = "India";
 
-console.log(capital)
+console.log(capital);
 
 // reverse object
 const obj = {
-  a: 'one',
-  b: 'two',
-  c: 'three',
-}
+  a: "one",
+  b: "two",
+  c: "three",
+};
 console.log(obj);
 const reverseKey = Object.keys(obj).reverse();
 let result = {};
-reverseKey.forEach(val => {
+reverseKey.forEach((val) => {
   result[val] = obj[val];
 });
 console.log(result);

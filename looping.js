@@ -57,7 +57,10 @@ do {
     if (i <= 3) {
         const catchPassword = prompt("Input password : ");
         password = catchPassword;
-        const info = password !== "kise" ? `Password salah! Kesempatan ${kesempatan}x lagi` : `Sukses, password anda adalah ${password}`;
+        const info =
+            password !== "kise"
+                ? `Password salah! Kesempatan ${kesempatan}x lagi`
+                : `Sukses, password anda adalah ${password}`;
         console.log(info);
     } else {
         console.log("Anda di blokir!!!");
@@ -192,5 +195,5 @@ do {
 
 const look = (number) => {
     console.log("This is arrow function!!!", number);
-}
-look(10)
+};
+look(10);

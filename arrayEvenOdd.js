@@ -1,8 +1,8 @@
-const input = [4, 7, 2, 8, 9, 10, 15, 5, 1, 6, 12]
+const input = [4, 7, 2, 8, 9, 10, 15, 5, 1, 6, 12];
 
 function evenOdd(input) {
     let even = [];
-    let odd = []
+    let odd = [];
     input.forEach((value) => {
         if (value % 2 == 0) {
             even.push(value);
@@ -15,7 +15,7 @@ function evenOdd(input) {
 
 function greaterNumb(input) {
     let greater = [];
-    input.forEach(value => {
+    input.forEach((value) => {
         if (value > 6) {
             greater.push(value);
         }
@@ -23,21 +23,25 @@ function greaterNumb(input) {
     return greater;
 }
 
+
 function merge(input, evenOdd, greaterNumb) {
     let convertMergeArr = "";
     const [even, odd] = evenOdd(input);
     const greater = greaterNumb(input);
     const mergeArr = [...even, ...odd, ...greater];
-    mergeArr.forEach(value => {
+    mergeArr.forEach((value) => {
         convertMergeArr += value + " ";
-    })
+    });
     console.log(
-        "evenArray = ", even,
-        "\noddArray = ", odd,
-        "\ngreaterNumbArray = ", greater,
-        "\nall values between 3 arrays = ", convertMergeArr
+        "evenArray = ",
+        even,
+        "\noddArray = ",
+        odd,
+        "\ngreaterNumbArray = ",
+        greater,
+        "\nall values between 3 arrays = ",
+        convertMergeArr,
     );
 }
 
-merge(input, evenOdd, greaterNumb)
-
+merge(input, evenOdd, greaterNumb);

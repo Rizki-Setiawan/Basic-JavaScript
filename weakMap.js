@@ -20,7 +20,7 @@
 // Map(1) { { name: 'Jonas' } => 1 }
 // */
 
-const { inspect } = require('util');
+const { inspect } = require("util");
 
 const visitsCountMap = new WeakMap(); // Menyimpan daftar user
 
@@ -30,9 +30,9 @@ function countUser(user) {
 }
 
 let jonas = { name: "Jonas" };
-countUser(jonas);  // Menambahkan user "Jonas"
+countUser(jonas); // Menambahkan user "Jonas"
 
-jonas = null;  // Data object "Jonas" dihapus
+jonas = null; // Data object "Jonas" dihapus
 
 // delay dibutuhkan untuk menunggu garbage collector bekerja
 setTimeout(function () {
