@@ -47,4 +47,4 @@ merge(input, evenOdd, greaterNumb);
 
 console.log("fitur save");
 
-console.log();
+console.log("fitur open");
