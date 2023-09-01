@@ -11,48 +11,36 @@ let kalah = 0;
 let seri = 0;
 while (true) {
 	let player = prompt("Masukan pilihan : ");
+	let computer = suwit[Math.floor(Math.random() * 3)];
+
 	if (check(suwit, player)) {
-		let computer = suwit[Math.floor(Math.random() * 3)];
-		if (player == "gunting") {
-			computer == "gunting"
-				? (result = "seri")
-				: computer == "batu"
-				? (result = "kalah")
-				: computer == "kertas"
-				? (result = "menang")
-				: (result = "tidak Valid");
-		} else if (player == "batu") {
-			computer == "gunting"
-				? (result = "menang")
-				: computer == "batu"
-				? (result = "seri")
-				: computer == "kertas"
-				? (result = "kalah")
-				: (result = "tidak Valid");
-		} else if (player == "kertas") {
-			computer == "gunting"
-				? (result = "kalah")
-				: computer == "batu"
-				? (result = "menang")
-				: computer == "kertas"
-				? (result = "seri")
-				: (result = "tidak Valid");
+		if (player === computer) {
+			result = "seri";
+		} else if (player === "gunting") {
+			computer === "kertas" ? (result = "menang") : (result = "kalah");
+		} else if (player === "batu") {
+			computer === "gunting" ? (result = "menang") : (result = "kalah");
+		} else {
+			computer === "batu" ? (result = "menang") : (result = "kalah");
 		}
-		if (result == "menang") {
+
+		if (result === "menang") {
 			menang++;
-		} else if (result == "kalah") {
+		} else if (result === "kalah") {
 			kalah++;
 		} else {
 			seri++;
 		}
+
 		console.log("==========================");
 		console.log(
 			`Player : ${player}\nComputer : ${computer}\nHasil : ${result}`,
 		);
 		console.log(`Menang : ${menang}\nKalah : ${kalah}\nSeri : ${seri}`);
 		console.log("==========================");
+
 		const main = prompt("Main lagi? (y/n) : ");
-		if (main == "N" || main == "n") {
+		if (main === "N" || main === "n") {
 			process.exit(0);
 		}
 	} else {
@@ -66,7 +54,7 @@ while (true) {
 // let input = 0;
 // while (input !== random) {
 // 	input = prompt("Masukan tebakan : ");
-// 	if (input == random) {
+// 	if (input === random) {
 // 		console.log("Selamat, tebakan benar");
 // 		process.exit(0);
 // 	} else {
