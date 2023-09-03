@@ -76,3 +76,4 @@ switch (101 > 100) {
 console.log("fitur search");
 console.log("fitur payment");
 console.log("fitur posting");
+console.log("fitur message");
