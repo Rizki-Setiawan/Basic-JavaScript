@@ -97,3 +97,5 @@ numb[1] = "satu";
 numb[3] = "tiga";
 numb[5] = "lima";
 console.log(numb);
+
+console.log("fitur search")
