@@ -3,31 +3,31 @@
 
 // simple synchronous callback
 function show(a, b, callback) {
-    console.log(callback(a, b));
+  console.log(callback(a, b));
 }
 
 function sum(a, b) {
-    return a + b;
+  return a + b;
 }
 
-show(10, 15, sum)
+show(10, 15, sum);
 
 // simple asynchronous callback
 function request() {
-    console.log("request...");
+  console.log("request...");
 }
 
 function get(callback) {
-    console.log("get...");
-    callback()
+  console.log("get...");
+  callback();
 }
 
 function showData() {
-    console.log("show...");
+  console.log("show...");
 }
 
 request();
-setTimeout(get, 1000, showData)
+setTimeout(get, 1000, showData);
 console.log("other process..");
 
 // // synchronous callback (blocking) di eksekusi secara berurutan
@@ -100,4 +100,5 @@ console.log("other process..");
 // //     console.log(hariLibur);
 // // }
 // // setTimeout(getData, 1000);
+
 

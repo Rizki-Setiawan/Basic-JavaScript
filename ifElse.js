@@ -18,12 +18,12 @@ let rpl = "E";
 rpl == "A"
     ? console.log("sangat baik")
     : rpl == "B"
-    ? console.log("baik")
-    : rpl == "C"
-    ? console.log("cukup")
-    : rpl == "D"
-    ? console.log("kurang")
-    : console.log("ngulang");
+        ? console.log("baik")
+        : rpl == "C"
+            ? console.log("cukup")
+            : rpl == "D"
+                ? console.log("kurang")
+                : console.log("ngulang");
 
 // If/Else Statement
 
@@ -77,3 +77,4 @@ console.log("fitur search");
 console.log("fitur payment");
 console.log("fitur posting");
 console.log("fitur message");
+console.log("fitur delete")

@@ -39,7 +39,7 @@ function merge(input, evenOdd, greaterNumb) {
         "\ngreaterNumbArray = ",
         greater,
         "\nall values between 3 arrays = ",
-        convertMergeArr,
+        convertMergeArr
     );
 }
 

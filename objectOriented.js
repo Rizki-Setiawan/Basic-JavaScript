@@ -45,7 +45,6 @@ class Bike {
 	drive() {
 		console.log(`riding with ${this.color + " " + this.brand}`);
 	}
-
 }
 
 const yamaha = new Bike("yamaha", "red", "300");

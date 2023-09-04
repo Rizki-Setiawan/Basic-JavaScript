@@ -98,4 +98,9 @@ numb[3] = "tiga";
 numb[5] = "lima";
 console.log(numb);
 
-console.log("fitur search")
+console.log("fitur search");
+
+const brand = ["yamaha", "suzuki", "vespa"];
+brand.forEach((e, i) => {
+  console.log(e, "", i);
+});
