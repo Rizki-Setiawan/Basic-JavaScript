@@ -63,4 +63,3 @@ function show(data) {
 setTimeout(get, 1000, show);
 
 console.log("fitur lain");
-console.log("test");

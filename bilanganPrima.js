@@ -35,5 +35,3 @@ function isPrime(arrayInput) {
 const arrayInput = [0, 23, 2, 4, 17, 5, 25, 23, 30];
 const primes = arrayInput.filter(isPrime);
 console.log(primes);
-
-console.log("hallo");

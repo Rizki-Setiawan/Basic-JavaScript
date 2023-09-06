@@ -100,5 +100,3 @@ console.log("other process..");
 // //     console.log(hariLibur);
 // // }
 // // setTimeout(getData, 1000);
-
-
