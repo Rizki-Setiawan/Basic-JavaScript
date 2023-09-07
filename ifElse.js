@@ -72,5 +72,3 @@ switch (101 > 100) {
         console.log("Salah");
         break;
 }
-
-console.log("fitur B");

@@ -5,3 +5,26 @@ let result = myArray.reverse();
 console.log(result);
 
 console.log("fitur search");
+
+function myFunction(nama) {
+  console.log(`Halo ${nama}`);
+}
+
+myFunction("kise");
+for (const iterator of myArray.reverse()) {
+  console.log(iterator)
+}
+
+class Bike{
+  constructor(nama){
+  this.nama=nama;
+}
+  say(){
+    console.log(`halo ${this.nama}`)
+  }
+}
+
+const myBike = new Bike("Rizki");
+myBike.say();
+
+console.log("OK");
