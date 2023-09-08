@@ -1,2 +1,2 @@
-Latihan JavaScript
+JavaScript
 =
