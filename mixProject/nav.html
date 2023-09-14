@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigasi-JS</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #nav-bar {
+            font-weight: bolder;
+            background-color: darkcyan;
+            display: flex;
+            flex-direction: row;
+        }
+
+        a {
+            padding: 30px;
+            margin: 0;
+            text-decoration: none;
+            color: white;
+            transition-duration: 0.5s;
+        }
+
+        a:hover {
+            background-color: darkturquoise;
+        }
+
+        .active {
+            background-color: darkturquoise;
+        }
+
+        p {
+            padding: 10px 10px 10px 10px;
+            text-align: justify;
+            text-indent: 50px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <nav id="nav-bar">
+        <a id="home" class="nav-item" href="#">Home</a>
+        <a id="about" class="nav-item" href="#">About</a>
+        <a id="contact" class="nav-item" href="#">Contact</a>
+        <a class="nav-item active" style="background-color: darkcyan;"></a>
+    </nav>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, nostrum ipsam laborum accusantium
+            aspernatur
+            voluptas ratione nam quibusdam dolores, in cumque asperiores impedit dolorum! At obcaecati ut amet eos
+            ipsum!
+        </p>
+    </main>
+    <footer></footer>
+    <script>
+        
+        var navBar = document.getElementById("nav-bar");
+        var navItem = navBar.getElementsByClassName("nav-item");
+        for (var i = 0; i < navItem.length; i++) {
+            navItem[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+        // var navItems = document.querySelectorAll(".nav-item");
+        // for (var i = 0; i < navItems.length; i++) {
+        //     navItems[i].addEventListener("click", function () {
+        //         this.classList.add("active");
+        //     });
+        // }
+
+        // function myHome() {
+        //     document.getElementById("home").setAttribute("class", "active");
+        //     document.getElementById("about").setAttribute("class", "");
+        //     document.getElementById("contact").setAttribute("class", "");
+        // }
+        // function myAbout() {
+        //     document.getElementById("about").setAttribute("class", "active");
+        //     document.getElementById("home").setAttribute("class", "");
+        //     document.getElementById("contact").setAttribute("class", "");
+        // }
+        // function myContact() {
+        //     document.getElementById("contact").setAttribute("class", "active");
+        //     document.getElementById("home").setAttribute("class", "");
+        //     document.getElementById("about").setAttribute("class", "");
+        // }
+    </script>
+</body>
+
+</html>
